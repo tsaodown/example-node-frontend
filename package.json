@@ -1,0 +1,30 @@
+{
+  "name": "base-server-node-express",
+  "version": "0.1.0",
+  "description": "Base server running on node with expressjs",
+  "main": "index.js",
+  "engines": {
+    "node": "7.2.*",
+    "npm": "3.10.*"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tsaodown/base-server-node-express.git"
+  },
+  "keywords": [
+    "node",
+    "express"
+  ],
+  "author": "Edd Tsao",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/tsaodown/base-server-node-express/issues"
+  },
+  "homepage": "https://github.com/tsaodown/base-server-node-express#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
