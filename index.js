@@ -1,13 +1,12 @@
-const express = require('express')
-const morgan = require('morgan')
-const promisify = require('es6-promisify')
+const Express = require('express')
+const Morgan = require('morgan')
 
 const conf = require('./config')
 
-const app = express()
+const app = Express()
 
-app.use(morgan(conf.get('logFormat')))
+app.use(Morgan(conf.get('logging.format')))
 
-app.listen(conf.get('port'), () => {
-  console.log(`Server listening on port ${conf.get('port')}`)
+app.listen(conf.get('server.port'), () => {
+  console.log(`Server listening on port ${conf.get('server.port')}`)
 })

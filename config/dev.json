@@ -1,4 +1,8 @@
 {
-  "port": "8080",
-  "logFormat": "dev"
+  "server": {
+    "port": "8080",
+  },
+  "logging": {
+    "format": "dev",
+  }
 }
