@@ -10,22 +10,28 @@ const conf = convict({
   },
 
   // Server
-  port: {
-    doc: 'Port that the service should run on',
-    format: 'port',
-    default: '8080',
-    env: 'PORT'
+  server: {
+    port: {
+      doc: 'Port that the service should run on',
+      format: 'port',
+      default: 8080,
+      env: 'PORT'
+    }
   },
 
   // Logging
-  logFormat: {
-    doc: 'Format that HTTP logs will be recorded in',
-    format: String,
-    default: 'dev'
+  logging: {
+    format: {
+      doc: 'Format that HTTP logs will be recorded in',
+      format: String,
+      default: 'dev'
+    }
   }
 })
 
-conf.loadFile('./config/' + conf.get('env') + '.json')
+const confFile = `./config/${conf.get('env')}.json`
+console.log(`Loading configuration: ${confFile}`)
+conf.loadFile(confFile)
 conf.validate({ strict: true })
 
 module.exports = conf
