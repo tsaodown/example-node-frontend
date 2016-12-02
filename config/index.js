@@ -26,6 +26,27 @@ const conf = convict({
       format: String,
       default: 'dev'
     }
+  },
+
+  // Sessions
+  session: {
+    redis: {
+      host: {
+        doc: 'Hostname for redis server',
+        format: 'url',
+        default: 'localhost'
+      },
+      port: {
+        doc: 'Port for redis server',
+        format: 'port',
+        default: 6379
+      },
+      password: {
+        doc: 'Password for redis server',
+        format: String,
+        default: ''
+      }
+    }
   }
 })
 
