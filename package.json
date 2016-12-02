@@ -9,6 +9,7 @@
   },
   "scripts": {
     "start": "if [ -z ${NODE_ENV} ] || [ \"$NODE_ENV\" = \"dev\" ] ; then nodemon ; else node index.js ; fi",
+    "debug": "node debug index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
