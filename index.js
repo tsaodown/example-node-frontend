@@ -1,3 +1,5 @@
+'use strict';
+
 const Express = require('express')
 const Morgan = require('morgan')
 const Session = require('express-session')
