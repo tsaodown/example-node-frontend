@@ -9,6 +9,7 @@
   },
   "scripts": {
     "start": "if [ -z ${NODE_ENV} ] || [ \"$NODE_ENV\" = \"dev\" ] ; then nodemon ; else node index.js ; fi",
+    "build": "webpack",
     "debug": "node debug index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -33,6 +34,7 @@
     "morgan": "^1.7.0"
   },
   "devDependencies": {
-    "nodemon": "^1.11.0"
+    "nodemon": "^1.11.0",
+    "webpack": "^1.14.0"
   }
 }
