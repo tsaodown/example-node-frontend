@@ -27,11 +27,9 @@
   },
   "homepage": "https://github.com/tsaodown/base-frontend-node#readme",
   "dependencies": {
-    "connect-redis": "^3.1.0",
     "convict": "^1.5.0",
     "es6-promisify": "^5.0.0",
     "express": "^4.14.0",
-    "express-session": "^1.14.2",
     "morgan": "^1.7.0"
   },
   "devDependencies": {
