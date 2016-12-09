@@ -1,7 +1,7 @@
 {
-  "name": "@tsaodown/base-node",
+  "name": "@tsaodown/base-frontend-node",
   "version": "0.1.0",
-  "description": "Base servers for nodejs",
+  "description": "Base Frontend Node",
   "main": "index.js",
   "engines": {
     "node": "7.2.*",
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tsaodown/base-node.git"
+    "url": "git+https://github.com/tsaodown/base-frontend-node.git"
   },
   "keywords": [
     "node",
@@ -23,9 +23,9 @@
   "author": "Edd Tsao",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/tsaodown/base-node/issues"
+    "url": "https://github.com/tsaodown/base-frontend-node/issues"
   },
-  "homepage": "https://github.com/tsaodown/base-node#readme",
+  "homepage": "https://github.com/tsaodown/base-frontend-node#readme",
   "dependencies": {
     "connect-redis": "^3.1.0",
     "convict": "^1.5.0",
