@@ -24,10 +24,15 @@ const config = {
     extensions: ['', '.js', '.jsx']
   },
   module: {
+    preLoaders: [{
+      test: /\.jsx?$/,
+      loader: 'standard',
+      exclude: /(node_modules)/
+    }],
     loaders: [{
       test: /\.jsx?$/,
-      loaders: ['react-hot', 'babel', 'eslint'],
-      include: APP_DIR
+      loaders: ['react-hot', 'babel'],
+      exclude: /(node_modules)/
     }]
   },
   plugins: [
