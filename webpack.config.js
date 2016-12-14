@@ -1,6 +1,7 @@
 const path = require('path')
 const process = require('process')
 
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 const Webpack = require('webpack')
 
 const APP_DIR = path.resolve(__dirname, 'app')
@@ -16,9 +17,9 @@ const config = {
     path.resolve(APP_DIR, 'index')
   ],
   output: {
-    path: BUILD_DIR,
+    path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
-    publicPath: '/build'
+    publicPath: '/'
   },
   resolve: {
     extensions: ['', '.js', '.jsx']
@@ -31,6 +32,9 @@ const config = {
     }]
   },
   plugins: [
+    new HtmlWebpackPlugin({
+      template: 'app/index.tpl.html'
+    }),
     new Webpack.optimize.OccurenceOrderPlugin(),
     new Webpack.HotModuleReplacementPlugin(),
     new Webpack.NoErrorsPlugin()

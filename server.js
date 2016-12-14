@@ -8,24 +8,30 @@ const Webpack = require('webpack')
 const WebpackDevMW = require('webpack-dev-middleware')
 const WebpackHotMW = require('webpack-hot-middleware')
 
-const compiler = Webpack(require('./webpack.config'))
 const conf = require('./config')
+const webpackConf = require('./webpack.config')
 
 const app = Express()
+const compiler = Webpack(webpackConf)
 
 app.use(Morgan(conf.get('logging.format')))
-app.use(Express.static(path.resolve(__dirname, 'public')))
+app.use(Express.static('public'))
 app.use(WebpackDevMW(compiler, {
-  publicPath: '/build',
+  publicPath: webpackConf.output.publicPath,
 
   stats: {
-    colors: true
+    colors: true,
+    hash: false,
+    timings: false,
+    chunks: false,
+    chunkModules: false,
+    modules: false
   }
 }))
 app.use(WebpackHotMW(compiler))
 
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'))
+  res.sendFile(path.join(__dirname, 'dist', 'index.html'))
 })
 
 app.listen(conf.get('server.port'), () => {
