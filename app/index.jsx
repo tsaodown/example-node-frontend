@@ -8,10 +8,10 @@ class App extends React.Component {
     return (
       <div>
         <p>Hello React!</p>
-        <TestComponent/>
+        <TestComponent />
       </div>
     )
   }
 }
 
-render(<App/>, document.getElementById('app'))
+render(<App />, document.getElementById('app'))

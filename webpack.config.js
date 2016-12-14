@@ -6,7 +6,6 @@ const Webpack = require('webpack')
 
 const APP_DIR = path.resolve(__dirname, 'app')
 const BUILD_DIR = path.resolve(__dirname, 'dist')
-const TARGET = process.env.npm_lifecycle_event
 
 process.env.BABEL_ENV = process.env.NODE_ENV
 
@@ -27,7 +26,7 @@ const config = {
   module: {
     loaders: [{
       test: /\.jsx?$/,
-      loaders: ['react-hot', 'babel'],
+      loaders: ['react-hot', 'babel', 'eslint'],
       include: APP_DIR
     }]
   },
