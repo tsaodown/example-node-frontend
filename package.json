@@ -8,7 +8,7 @@
     "npm": "3.10.*"
   },
   "scripts": {
-    "start": "if [ -z ${NODE_ENV} ] || [ \"$NODE_ENV\" = \"dev\" ] ; then nodemon ; else node index.js ; fi",
+    "start": "if [ -z ${NODE_ENV} ] || [ \"$NODE_ENV\" = \"dev\" ] ; then nodemon ; else node server.js ; fi",
     "build": "webpack",
     "debug": "node debug index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
