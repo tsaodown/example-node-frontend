@@ -1,16 +1,30 @@
+// @flow
+
 import React from 'react'
 
-export default class TestComponent extends React.Component {
-  constructor (props) {
+type Props = {
+  start: number,
+  increment: number
+}
+
+class TestComponent extends React.Component {
+  props: Props
+
+  state: {
+    likesCount: number
+  }
+  onLike: () => void
+
+  constructor (props: Props) {
     super(props)
     this.state = {
-      likesCount: 0
+      likesCount: props.start
     }
     this.onLike = this.onLike.bind(this)
   }
 
   onLike () {
-    let newLikesCount = this.state.likesCount + 1
+    let newLikesCount = this.state.likesCount + this.props.increment
     this.setState({
       likesCount: newLikesCount
     })
@@ -25,3 +39,9 @@ export default class TestComponent extends React.Component {
     )
   }
 }
+
+TestComponent.propTypes = {
+  start: React.PropTypes.number.isRequired
+}
+
+export default TestComponent

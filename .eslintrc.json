@@ -1,6 +1,18 @@
 {
-  "parsaer": "babel-eslint",
+  "env": {
+    "browser": "true",
+    "node": "true"
+  },
+  "plugins": [
+    "react",
+    "flowtype"
+  ],
   "extends": [
-    "react", "standard", "standard-flow"
-  ]
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:flowtype/recommended"
+  ],
+  "rules": {
+    "no-console": "off"
+  }
 }
