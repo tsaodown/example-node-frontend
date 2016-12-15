@@ -3,7 +3,7 @@
 import React from 'react'
 
 import classnames from 'classnames'
-import './TestComponent.less'
+import './styles.less'
 
 type Props = {
   start: number,
