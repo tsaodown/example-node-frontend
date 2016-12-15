@@ -32,7 +32,7 @@ const config = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: 'app/index.tpl.html'
+      template: path.resolve(SRC_DIR, 'index.tpl.html')
     }),
     new Webpack.optimize.OccurenceOrderPlugin(),
     new Webpack.HotModuleReplacementPlugin(),
