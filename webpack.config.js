@@ -1,6 +1,7 @@
 const path = require('path')
 const process = require('process')
 
+const FlowBabelWebpackPlugin = require('flow-babel-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const Webpack = require('webpack')
 
@@ -31,6 +32,7 @@ const config = {
     }]
   },
   plugins: [
+    new FlowBabelWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: 'app/index.tpl.html'
     }),
