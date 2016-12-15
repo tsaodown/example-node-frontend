@@ -4,7 +4,7 @@ const process = require('process')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const Webpack = require('webpack')
 
-const APP_DIR = path.resolve(__dirname, 'app')
+const SRC_DIR = path.resolve(__dirname, 'src')
 const BUILD_DIR = path.resolve(__dirname, 'dist')
 
 process.env.BABEL_ENV = process.env.NODE_ENV
@@ -13,7 +13,7 @@ const config = {
   devtool: 'eval-source-map',
   entry: [
     'webpack-hot-middleware/client',
-    path.resolve(APP_DIR, 'index')
+    path.resolve(SRC_DIR, 'index')
   ],
   output: {
     path: BUILD_DIR,
