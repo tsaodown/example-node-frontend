@@ -7,7 +7,7 @@ type Props = {
   increment: number
 }
 
-class TestComponent extends React.Component {
+export default class TestComponent extends React.Component {
   props: Props
 
   state: {
@@ -39,9 +39,3 @@ class TestComponent extends React.Component {
     )
   }
 }
-
-TestComponent.propTypes = {
-  start: React.PropTypes.number.isRequired
-}
-
-export default TestComponent
