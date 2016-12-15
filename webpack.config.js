@@ -24,11 +24,6 @@ const config = {
     extensions: ['', '.js', '.jsx']
   },
   module: {
-    preLoaders: [{
-      test: /\.jsx?$/,
-      loader: 'standard',
-      exclude: /(node_modules)/
-    }],
     loaders: [{
       test: /\.jsx?$/,
       loaders: ['react-hot', 'babel'],

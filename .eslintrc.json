@@ -1,0 +1,6 @@
+{
+  "parsaer": "babel-eslint",
+  "extends": [
+    "react", "standard", "standard-flow"
+  ]
+}
