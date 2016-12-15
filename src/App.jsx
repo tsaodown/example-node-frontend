@@ -9,7 +9,7 @@ export default class App extends React.Component {
     return (
       <div>
         <p>Hello React!</p>
-        <TestComponent start={10} increment={-100}/>
+        <TestComponent start={10} increment={1}/>
       </div>
     )
   }

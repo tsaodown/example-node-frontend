@@ -2,6 +2,9 @@
 
 import React from 'react'
 
+import classnames from 'classnames'
+import './TestComponent.less'
+
 type Props = {
   start: number,
   increment: number
@@ -31,9 +34,16 @@ export default class TestComponent extends React.Component {
   }
 
   render () {
+    let classes = classnames({
+      'odd': this.state.likesCount % 2 === 1,
+      'even': this.state.likesCount % 2 === 0,
+      'ten': this.state.likesCount % 10 === 0,
+      'fives': this.state.likesCount % 5 === 0 && this.state.likesCount % 10 !== 0
+    })
+
     return (
       <div>
-        Likes : <span>{this.state.likesCount}</span>
+        Likes : <span className={classes}>{this.state.likesCount}</span>
         <div><button onClick={this.onLike}>Like Me</button></div>
       </div>
     )
