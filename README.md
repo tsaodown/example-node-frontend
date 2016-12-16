@@ -1,1 +1,1 @@
-# Base Frontend Node
+# Base Node - Frontend

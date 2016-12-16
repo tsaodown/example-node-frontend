@@ -1,7 +1,7 @@
 {
-  "name": "@tsaodown/base-frontend-node",
+  "name": "@tsaodown/base-node-frontend",
   "version": "0.1.0",
-  "description": "Base Frontend Node",
+  "description": "Base Node - Frontend",
   "author": "Edd Tsao",
   "license": "Apache-2.0",
   "main": "server.js",
@@ -11,12 +11,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tsaodown/base-frontend-node.git"
+    "url": "git+https://github.com/tsaodown/base-node-frontend.git"
   },
   "bugs": {
-    "url": "https://github.com/tsaodown/base-frontend-node/issues"
+    "url": "https://github.com/tsaodown/base-node-frontend/issues"
   },
-  "homepage": "https://github.com/tsaodown/base-frontend-node#readme",
+  "homepage": "https://github.com/tsaodown/base-node-frontend#readme",
   "keywords": [
     "node",
     "express"
