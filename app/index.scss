@@ -1,4 +1,8 @@
+@import 'global';
+
 $primary: #ee5555;
 $secondary: #99ee99;
 $tertiary: #75b1ff;
 $quaternary: rgb(239, 241, 141);
+
+@import 'grid/grid';
