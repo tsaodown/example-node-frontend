@@ -5,4 +5,4 @@
 [libs]
 
 [options]
-module.name_mapper='.*\(.less\)' -> 'empty/object'
+module.name_mapper='.*\(.scss\)' -> 'empty/object'

@@ -3,7 +3,7 @@
 import React from 'react'
 
 import classnames from 'classnames'
-import './index.less'
+import './index.scss'
 
 type Props = {
   start: number,
