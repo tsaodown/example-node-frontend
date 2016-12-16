@@ -40,3 +40,30 @@ All application code will be stored in the `app` directory. Within the `app` dir
 #### Server
 - Web Framework: [express](https://github.com/expressjs/express)
 - Configuration: [convict](https://github.com/mozilla/node-convict)
+
+### Developer Setup
+
+I would strongly recommend using Atom as your editor for this project. It has wonderful plugins to work with eslint and flow to reduce developer pain from poor styling and runtime errors.
+
+1. Install [atom](https://atom.io/)
+1. Install the following plugins:
+    - [highlight-selected](https://atom.io/packages/highlight-selected)
+    - [pigments](https://atom.io/packages/pigments)
+    - [minimap](https://atom.io/packages/minimap)
+    - [minimap-highlight-selected](https://atom.io/packages/minimap-highlight-selected)
+    - [minimap-pigments](https://atom.io/packages/minimap-pigments)
+    - [minimap-cursorline](https://atom.io/packages/minimap-cursorline)
+    - [language-javascript-jsx](https://atom.io/packages/language-javascript-jsx)
+    - [nice-index](https://atom.io/packages/nice-index)
+    - [vertical-tabs](https://atom.io/packages/vertical-tabs)
+    - [autocomplete-modules](https://atom.io/packages/autocomplete-modules)
+    - [linter](https://atom.io/packages/linter)
+    - [linter-eslint](https://atom.io/packages/linter-eslint)
+    - [linter-flow](https://atom.io/packages/linter-flow)
+1. Install [nuclide](https://atom.io/packages/nuclide) and disable the following plugins:
+    - nuclide-diagnostics-store
+    - nuclide-file-tree
+    - nuclide-source-control-side-bar
+1. Install a better theme and syntax coloring:
+    - [SETI UI](https://atom.io/themes/seti-ui)
+    - [SETI Syntax](https://atom.io/themes/seti-syntax)
