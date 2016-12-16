@@ -19,24 +19,24 @@ All application code will be stored in the `app` directory. Within the `app` dir
 
 #### Testing
 
-- **Test Runner:** [ava](https://github.com/avajs/ava)
-- **TDD/BDD Syntax:** [ava-spec](https://github.com/avajs/ava-spec)
-- **Mocks/Spies**: [sinon](https://github.com/sinonjs/sinon)
-- **React Element Testing:** [enzyme](https://github.com/airbnb/enzyme)
-- **Code Coverage:** [istanbul](https://github.com/gotwarlost/istanbul)
+- Test Runner: [ava](https://github.com/avajs/ava)
+- TDD/BDD Syntax: [ava-spec](https://github.com/avajs/ava-spec)
+- Mocks/Spies: [sinon](https://github.com/sinonjs/sinon)
+- React Element Testing: [enzyme](https://github.com/airbnb/enzyme)
+- Code Coverage: [istanbul](https://github.com/gotwarlost/istanbul)
 
 #### Development
-- **View Generation:** [react](https://github.com/facebook/react)
-- **Frontend Framework:** [foundation](http://foundation.zurb.com/sites/docs/)
-- **Compiled CSS:** [SASS](http://www.sass-lang.com/documentation/)
+- View Generation: [react](https://github.com/facebook/react)
+- Frontend Framework: [foundation](http://foundation.zurb.com/sites/docs/)
+- Compiled CSS: [SASS](http://www.sass-lang.com/documentation/)
 
 #### Process
-- **Code Linting:** [eslint](https://github.com/eslint/eslint)
-- **Code Style:** [standard](http://standardjs.com/)
-- **Bundler/Build Tool:** [webpack](https://webpack.github.io/docs/)
-- **Javascript 'Compiler':** [babel](https://github.com/babel/babel)
-- **Javascript Static Analysis/Type Checking:** [flow](https://flowtype.org/docs/getting-started.html)
+- Code Linting: [eslint](https://github.com/eslint/eslint)
+- Code Style: [standard](http://standardjs.com/)
+- Bundler/Build Tool: [webpack](https://webpack.github.io/docs/)
+- Javascript 'Compiler': [babel](https://github.com/babel/babel)
+- Javascript Static Analysis/Type Checking: [flow](https://flowtype.org/docs/getting-started.html)
 
 #### Server
-- **Web Framework:** [express](https://github.com/expressjs/express)
-- **Configuration:** [convict](https://github.com/mozilla/node-convict)
+- Web Framework: [express](https://github.com/expressjs/express)
+- Configuration: [convict](https://github.com/mozilla/node-convict)
