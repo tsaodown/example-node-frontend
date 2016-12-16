@@ -2,7 +2,7 @@
 
 import React from 'react'
 
-import TestComponent from './TestComponent'
+import TestComponent from '../TestComponent'
 
 export default class App extends React.Component {
   render () {
