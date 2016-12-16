@@ -29,8 +29,8 @@ const config = {
       loaders: ['react-hot', 'babel'],
       exclude: /(node_modules)/
     }, {
-      test: /\.less$/,
-      loader: 'style!css?sourceMap!autoprefixer!less?sourceMap'
+      test: /\.scss$/,
+      loader: 'style!css?sourceMap!autoprefixer!sass?sourceMap'
     }]
   },
   plugins: [
