@@ -32,7 +32,7 @@ const config = {
       exclude: /(node_modules)/
     }, {
       test: /\.scss$/,
-      loader: 'style!css?sourceMap!postcss!sass?sourceMap'
+      loader: 'style?sourceMap!css?sourceMap!postcss?sourceMap!sass?sourceMap'
     }]
   },
   'postcss': () => {
@@ -41,9 +41,11 @@ const config = {
     ]
   },
   sassLoader: {
-    includePaths: path.join(installedPath.sync('foundation-sites', {
-      local: true
-    }), 'scss')
+    includePaths: [
+      path.join(installedPath.sync('foundation-sites', {
+        local: true
+      }), 'scss')
+    ]
   },
   plugins: [
     new HtmlWebpackPlugin({
