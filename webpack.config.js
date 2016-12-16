@@ -1,6 +1,8 @@
+const installedPath = require('get-installed-path')
 const path = require('path')
 const process = require('process')
 
+const Autoprefixer = require('autoprefixer')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const Webpack = require('webpack')
 
@@ -30,8 +32,18 @@ const config = {
       exclude: /(node_modules)/
     }, {
       test: /\.scss$/,
-      loader: 'style!css?sourceMap!autoprefixer!sass?sourceMap'
+      loader: 'style!css?sourceMap!postcss!sass?sourceMap'
     }]
+  },
+  'postcss': () => {
+    return [
+      Autoprefixer
+    ]
+  },
+  sassLoader: {
+    includePaths: path.join(installedPath.sync('foundation-sites', {
+      local: true
+    }), 'scss')
   },
   plugins: [
     new HtmlWebpackPlugin({
