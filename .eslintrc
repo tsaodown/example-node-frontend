@@ -5,13 +5,15 @@
   },
   "plugins": [
     "react",
-    "flowtype"
+    "flowtype",
+    "ava"
   ],
   "extends": [
     "standard",
     "standard-flow",
     "plugin:react/recommended",
-    "plugin:flowtype/recommended"
+    "plugin:flowtype/recommended",
+    "plugin:ava/recommended"
   ],
   "rules": {
     "no-console": "off"

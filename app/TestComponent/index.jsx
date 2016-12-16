@@ -3,7 +3,7 @@
 import React from 'react'
 
 import classnames from 'classnames'
-import './styles.less'
+import './index.less'
 
 type Props = {
   start: number,

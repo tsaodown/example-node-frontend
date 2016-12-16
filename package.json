@@ -2,38 +2,52 @@
   "name": "@tsaodown/base-frontend-node",
   "version": "0.1.0",
   "description": "Base Frontend Node",
+  "author": "Edd Tsao",
+  "license": "Apache-2.0",
   "main": "server.js",
   "engines": {
     "node": "7.2.*",
     "npm": "3.10.*"
   },
-  "scripts": {
-    "start": "babel server.js | node",
-    "build": "webpack",
-    "debug": "node debug index.js",
-    "test": "echo \"No test specified\"",
-    "lint": "eslint .",
-    "validate": "npm ls"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tsaodown/base-frontend-node.git"
   },
-  "keywords": [
-    "node",
-    "express"
-  ],
-  "author": "Edd Tsao",
-  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/tsaodown/base-frontend-node/issues"
   },
   "homepage": "https://github.com/tsaodown/base-frontend-node#readme",
+  "keywords": [
+    "node",
+    "express"
+  ],
+  "scripts": {
+    "start": "babel server.js | node",
+    "build": "webpack",
+    "debug": "node debug index.js",
+    "test": "ava \"app/**/*.test.js\"",
+    "watch:test": "npm run test -- --watch",
+    "cover": "nyc npm run test",
+    "watch:cover": "nodemon --quiet --watch app --exec npm run cover -s",
+    "lint": "eslint ."
+  },
+  "ava": {
+    "require": [
+      "babel-register",
+      "babel-polyfill",
+      "ignore-styles"
+    ]
+  },
+  "nyc": {
+    "reporter": [
+      "lcov",
+      "text"
+    ]
+  },
   "dependencies": {
     "autoprefixer-loader": "^3.2.0",
     "babel-cli": "^6.18.0",
     "babel-core": "^6.20.0",
-    "babel-eslint": "^7.1.1",
     "babel-loader": "^6.2.9",
     "babel-plugin-transform-flow-strip-types": "^6.18.0",
     "babel-preset-es2015": "^6.18.0",
@@ -55,17 +69,23 @@
     "webpack": "^1.14.0"
   },
   "devDependencies": {
-    "chai": "^3.5.0",
+    "ava": "^0.17.0",
+    "ava-spec": "^1.0.1",
+    "babel-eslint": "^7.1.1",
+    "babel-plugin-istanbul": "^3.0.0",
+    "babel-register": "^6.18.0",
     "enzyme": "^2.6.0",
     "eslint": "^3.12.2",
     "eslint-config-standard": "^6.2.1",
     "eslint-config-standard-flow": "^1.0.1",
+    "eslint-plugin-ava": "^4.0.0",
     "eslint-plugin-flowtype": "^2.29.1",
     "eslint-plugin-promise": "^3.4.0",
     "eslint-plugin-react": "^6.8.0",
     "flow-bin": "^0.37.0",
-    "mocha": "^3.2.0",
+    "ignore-styles": "^5.0.1",
     "nodemon": "^1.11.0",
+    "nyc": "^10.0.0",
     "precommit-hook-eslint": "^3.0.0",
     "react-hot-loader": "^1.3.1",
     "sinon": "^1.17.6",
@@ -73,8 +93,6 @@
     "webpack-hot-middleware": "^2.13.2"
   },
   "pre-commit": [
-    "lint",
-    "validate",
-    "test"
+    "lint"
   ]
 }

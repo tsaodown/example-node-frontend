@@ -8,7 +8,7 @@ export default class App extends React.Component {
   render () {
     return (
       <div>
-        <p>Hello React!</p>
+        <p>Base Frontend Server has arrived.</p>
         <TestComponent start={10} increment={1}/>
       </div>
     )
