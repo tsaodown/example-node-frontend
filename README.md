@@ -13,7 +13,7 @@
 
 ### Project Structure
 
-All application code will be stored in the `app` directory. Within the `app` directory, higher level UI concepts can be stored in any directory structure, but related `jsx`, `scss`, and `test.js` should be stored together.
+All application code will be stored in the `app` directory. Within the `app` directory, higher level UI concepts can be stored in any directory structure, but related `.jsx`, `.scss`, and `.test.js` should be stored together.
 
 ### Documentation
 
