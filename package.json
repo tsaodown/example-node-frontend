@@ -36,7 +36,8 @@
       "babel-register",
       "babel-polyfill",
       "ignore-styles"
-    ]
+    ],
+    "babel": "inherit"
   },
   "nyc": {
     "reporter": [
@@ -87,6 +88,7 @@
     "nodemon": "^1.11.0",
     "nyc": "^10.0.0",
     "precommit-hook-eslint": "^3.0.0",
+    "react-addons-test-utils": "^15.4.1",
     "react-hot-loader": "^1.3.1",
     "sinon": "^1.17.6",
     "webpack-dev-middleware": "^1.8.4",

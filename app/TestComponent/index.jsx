@@ -10,8 +10,12 @@ type Props = {
   increment: number
 }
 
-export default class TestComponent extends React.Component {
+class TestComponent extends React.Component {
   props: Props
+  static defaultProps: {
+    start: number,
+    increment: number
+  }
 
   state: {
     likesCount: number
@@ -49,3 +53,10 @@ export default class TestComponent extends React.Component {
     )
   }
 }
+
+TestComponent.defaultProps = {
+  start: 0,
+  increment: 1
+}
+
+export default TestComponent
