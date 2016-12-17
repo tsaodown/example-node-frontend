@@ -2,7 +2,7 @@ import React from 'react'
 import { describe } from 'ava-spec'
 import { shallow } from 'enzyme'
 
-import TestComponent from './index.jsx'
+import TestComponent from './testcomponent'
 
 describe('TestComponent', it => {
   it('should have odd class', t => {
