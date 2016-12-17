@@ -15,7 +15,7 @@ const config = {
   devtool: 'eval-source-map',
   entry: [
     'webpack-hot-middleware/client',
-    path.resolve(APP_DIR, 'index')
+    path.resolve(APP_DIR, 'main')
   ],
   output: {
     path: BUILD_DIR,
@@ -33,6 +33,13 @@ const config = {
     }, {
       test: /\.scss$/,
       loader: 'style?sourceMap!css?sourceMap!postcss?sourceMap!sass?sourceMap'
+    }, {
+      test: /\.(jpe?g|png|gif|svg)$/i,
+      loaders: [
+        'file?hash=sha512&digest=hex?name=[hash].[ext]',
+        'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false'
+      ],
+      include: path.resolve(__dirname, 'app', 'images')
     }]
   },
   'postcss': () => {

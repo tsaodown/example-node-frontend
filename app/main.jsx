@@ -3,9 +3,9 @@
 import React from 'react'
 import { render } from 'react-dom'
 
-import App from './App'
+import App from './containers/app'
 
-import './index.scss'
+import './main.scss'
 import 'script!jquery'
 import 'script!foundation-sites/js/foundation.core'
 
