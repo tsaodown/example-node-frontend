@@ -1,4 +1,3 @@
-const installedPath = require('get-installed-path')
 const path = require('path')
 const process = require('process')
 
@@ -15,6 +14,7 @@ const config = {
   devtool: 'eval-source-map',
   entry: [
     'webpack-hot-middleware/client',
+    'bootstrap-loader',
     path.resolve(APP_DIR, 'main')
   ],
   output: {
@@ -40,6 +40,9 @@ const config = {
         'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false'
       ],
       include: path.resolve(__dirname, 'app', 'images')
+    }, {
+      test: /bootstrap\/dist\/js\/umd\//,
+      loader: 'imports?jQuery=jquery'
     }]
   },
   'postcss': () => {
@@ -47,16 +50,27 @@ const config = {
       Autoprefixer
     ]
   },
-  sassLoader: {
-    includePaths: [
-      path.join(installedPath.sync('foundation-sites', {
-        local: true
-      }), 'scss')
-    ]
-  },
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve(APP_DIR, 'index.tpl.html')
+    }),
+    new Webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+      'window.jQuery': 'jquery',
+      Tether: 'tether',
+      'window.Tether': 'tether',
+      Alert: 'exports?Alert!bootstrap/js/dist/alert',
+      Button: 'exports?Button!bootstrap/js/dist/button',
+      Carousel: 'exports?Carousel!bootstrap/js/dist/carousel',
+      Collapse: 'exports?Collapse!bootstrap/js/dist/collapse',
+      Dropdown: 'exports?Dropdown!bootstrap/js/dist/dropdown',
+      Modal: 'exports?Modal!bootstrap/js/dist/modal',
+      Popover: 'exports?Popover!bootstrap/js/dist/popover',
+      Scrollspy: 'exports?Scrollspy!bootstrap/js/dist/scrollspy',
+      Tab: 'exports?Tab!bootstrap/js/dist/tab',
+      Tooltip: 'exports?Tooltip!bootstrap/js/dist/tooltip',
+      Util: 'exports?Util!bootstrap/js/dist/util'
     }),
     new Webpack.optimize.OccurenceOrderPlugin(),
     new Webpack.HotModuleReplacementPlugin(),
