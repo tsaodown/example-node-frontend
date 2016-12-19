@@ -1,8 +1,8 @@
 import React from 'react'
 
-import './nextcomponent.scss'
+import './next.scss'
 
-export default class NextComponent extends React.Component {
+export default class Test extends React.Component {
   render () {
     return (
       <div className='otherclass'>Other</div>

@@ -3,14 +3,14 @@
 import React from 'react'
 
 import classnames from 'classnames'
-import './testcomponent.scss'
+import './test.scss'
 
 type Props = {
   start: number,
   increment: number
 }
 
-class TestComponent extends React.Component {
+class Test extends React.Component {
   props: Props
   static defaultProps: {
     start: number,
@@ -54,9 +54,9 @@ class TestComponent extends React.Component {
   }
 }
 
-TestComponent.defaultProps = {
+Test.defaultProps = {
   start: 0,
   increment: 1
 }
 
-export default TestComponent
+export default Test

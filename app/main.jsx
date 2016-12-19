@@ -3,6 +3,13 @@
 import React from 'react'
 import { render } from 'react-dom'
 
-import App from './containers/app'
+import Test from './Test/test'
+import Next from './Next/next'
 
-render(<App />, document.getElementById('app'))
+render((
+  <div>
+    <p>Base Frontend Server has arrived.</p>
+    <Test start={10} increment={1}/>
+    <Next/>
+  </div>
+), document.getElementById('app'))
