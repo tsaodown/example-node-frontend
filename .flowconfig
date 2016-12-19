@@ -6,4 +6,3 @@
 
 [options]
 module.name_mapper='.*\(.scss\)' -> 'empty/object'
-module.name_mapper='^script.*' -> 'empty/object'
