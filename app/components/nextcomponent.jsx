@@ -5,7 +5,7 @@ import './nextcomponent.scss'
 export default class NextComponent extends React.Component {
   render () {
     return (
-      <div classNames='otherclass'></div>
+      <div className='otherclass'>Other</div>
     )
   }
 }
